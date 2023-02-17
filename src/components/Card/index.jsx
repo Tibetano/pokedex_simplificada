@@ -10,16 +10,29 @@ export function Card(props) {
             <div>
                 <img src={props.sprite} alt={`Imagem do(a) ${props.name}.`} />
                 <p>Nome: {props.nome}</p>
-                <p>Tipo: {props.type}</p>
+
+                <p> Tipos: 
                 {
-                    props.habilidades.map((habilidade, index) => {
-                        return (
-                            <p key={index}>
-                                {`Habilidade ${index + 1}: ${habilidade.nome}`}
-                            </p>
-                        )
+                    props.types.map( (tipo, index) => {
+                        return ( 
+                            ' ' + 
+                            tipo.nome +
+                            (index < props.types.length - 1 ? ',' : ''))
                     })
                 }
+                </p>
+
+                <p> Habilidades: 
+                {
+                    
+                    props.habilidades.map( (habilidade, index) => {
+                        return ( 
+                            ' ' + 
+                            habilidade.nome + 
+                            (index < props.habilidades.length - 1 ? ',' : ''))
+                    })
+                }
+                </p>
             </div>
         )
     } 

@@ -16,9 +16,12 @@ function Home() {
       .then(response => {
         const pokenomTemp = {
           nome: response.data.name,
-          type: response.data.types[0].type.name,
-          habilidades: response.data.abilities.map(
-            h => { return {nome: h.ability.name} }
+          types: response.data.types.map(t => {
+            return {nome: t.type.name}
+          }),
+          habilidades: response.data.abilities.map(h => {
+            return { nome: h.ability.name }
+          }
           ),
           sprite: response.data.sprites.front_default
         }
@@ -48,7 +51,7 @@ function Home() {
       {
         <Card
           nome={pokemon.nome}
-          type={pokemon.type}
+          types={pokemon.types}
           habilidades={pokemon.habilidades}
           sprite={pokemon.sprite}
         />
