@@ -37,12 +37,12 @@ function Home() {
   }
 
   return (
-    <div>
+    <div className='container'>
       <h1>Pokedex</h1>
 
       <input
         type="text"
-        placeholder='Digite o nome do pokemon...'
+        placeholder='Nome do pokemon...'
         onChange={e => setNomePokemon(e.target.value)}
       />
 
