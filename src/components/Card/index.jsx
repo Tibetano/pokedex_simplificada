@@ -6,7 +6,6 @@ export function Card(props) {
             <div className='card'>
                 <p>Por favor, informe o nome do pokemon.</p>
             </div>
-
         )
     } else if (props.nome === '-1') {
         return (
@@ -19,7 +18,6 @@ export function Card(props) {
             <div className='card'>
                 <img src={props.sprite} alt={`Imagem do(a) ${props.name}.`} />
                 <p> <strong> Nome: </strong> {props.nome}</p>
-
                 <p> <strong>Tipos: </strong>
                     {
                         props.types.map((tipo, index) => {
@@ -33,7 +31,6 @@ export function Card(props) {
 
                 <p> <strong> Habilidades: </strong>
                     {
-
                         props.habilidades.map((habilidade, index) => {
                             return (
                                 ' ' +

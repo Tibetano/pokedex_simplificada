@@ -1,7 +1,6 @@
 .card {
     border-radius: 10px;
     width: 15%;
-    //background-color: green;
     text-align: center;
     padding: 5px 15px 15px 15px;
 
@@ -9,9 +8,7 @@
     color: #fff;
 }
 
-
 .card img {
     border-radius: 50px;
-    //background-color: magenta;
     background-color: #00FFFF;
 }

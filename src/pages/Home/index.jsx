@@ -9,7 +9,6 @@ function Home() {
   const [nomePokemon, setNomePokemon] = useState('')
   const [pokemon, setPokemon] = useState({ nome: '', habilidades: [] })
 
-
   async function pesquisarPokemon() {
 
     await axios.get('https://pokeapi.co/api/v2/pokemon/' + nomePokemon.toLowerCase())
@@ -17,12 +16,11 @@ function Home() {
         const pokenomTemp = {
           nome: response.data.name,
           types: response.data.types.map(t => {
-            return {nome: t.type.name}
+            return { nome: t.type.name }
           }),
           habilidades: response.data.abilities.map(h => {
             return { nome: h.ability.name }
-          }
-          ),
+          }),
           sprite: response.data.sprites.front_default
         }
         console.log(response.data)
@@ -38,7 +36,9 @@ function Home() {
 
   return (
     <div className='container'>
-      <h1>Pokedex</h1>
+      <header>
+        <h1>Pokedex</h1>
+      </header>
 
       <input
         type="text"
