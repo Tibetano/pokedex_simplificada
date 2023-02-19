@@ -18,9 +18,9 @@ export function Card(props) {
         return (
             <div className='card'>
                 <img src={props.sprite} alt={`Imagem do(a) ${props.name}.`} />
-                <p>Nome: {props.nome}</p>
+                <p> <strong> Nome: </strong> {props.nome}</p>
 
-                <p> Tipos:
+                <p> <strong>Tipos: </strong>
                     {
                         props.types.map((tipo, index) => {
                             return (
@@ -31,7 +31,7 @@ export function Card(props) {
                     }
                 </p>
 
-                <p> Habilidades:
+                <p> <strong> Habilidades: </strong>
                     {
 
                         props.habilidades.map((habilidade, index) => {

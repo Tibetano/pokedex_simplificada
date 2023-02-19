@@ -46,7 +46,7 @@ function Home() {
         onChange={e => setNomePokemon(e.target.value)}
       />
 
-      <button onClick={pesquisarPokemon}>Pesquisar</button>
+      <button type='button' onClick={pesquisarPokemon}>Pesquisar</button>
 
       {
         <Card

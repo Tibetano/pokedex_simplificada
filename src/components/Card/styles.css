@@ -1,19 +1,17 @@
 .card {
-    height: 100%;
-    width: 50%;
-  
+    border-radius: 10px;
+    width: 15%;
+    //background-color: green;
+    text-align: center;
+    padding: 5px 15px 15px 15px;
+
     background: #735bf2;
     color: #fff;
-  
-    border-radius: 10px;
-    margin-bottom: 20px;
-  
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 24px;
 }
-  
-.card strong {
-    font-size: 18px;
+
+
+.card img {
+    border-radius: 50px;
+    //background-color: magenta;
+    background-color: #00FFFF;
 }
