@@ -4,7 +4,7 @@ export function Card(props) {
     if (props.nome === '') {
         return (
             <div className='card'>
-                <p>Por favor, insira o nome do pokemon.</p>
+                <p>Por favor, informe o nome do pokemon.</p>
             </div>
 
         )
